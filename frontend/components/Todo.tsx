@@ -12,11 +12,9 @@ const Todo = ({ todo }: { todo: TodoType }) => {
             </p>
           </div>
         </div>
-        <div className="px-2">
-          <p className="focus:outline-none text-sm leading-5 py-4 text-gray-600">
-            {todo.content}
-          </p>
-        </div>
+      </div>
+      <div className="px-2">
+        <p className="focus:outline-none text-sm leading-5 py-4 text-gray-600">{todo.content}</p>
       </div>
     </div>
   );
