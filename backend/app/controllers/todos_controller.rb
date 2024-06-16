@@ -15,4 +15,19 @@ class TodosController < ApplicationController
     render json: @todo
   end
 
+  # POST/todos
+  def create
+    @todo = Todo.new(todo_params)
+
+    # location:@todoはHTTPレスポンスヘッダーのlocationに自動的にURLを設定し、後でユーザーがアクセスできるようにするため。
+    if @todo.save
+      render json: @todo, status: :created, location: @todo
+    else
+      render json: @todo.errors, status: :unprocessable_entity
+    end
+  end
+
+  def todo_params
+    params.require(:todo).permit(:title, :content)
+  end
 end
