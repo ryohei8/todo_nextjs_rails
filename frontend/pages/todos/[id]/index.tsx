@@ -45,6 +45,11 @@ const TodoDetail = () => {
         <label className="block text-xl font-bold text-gray700">Todo</label>
         <Todo todo={todo} />{/* todoDetailsコンポーネントのtodo ステートを子コンポーネントのTodoコンポーネントに渡す */}
         <div className="flex justify-end">
+          <Link
+            href={`/todos/${id}/edit`}
+            className="mt-auto font-medium text-blue-600 hover:bg-blue-300 focus:outline-none mr-12">
+            Edit
+          </Link>
           <Link href="/" className="mt-auto font-medium text-blue-600 hover:bg-blue-300 focus:outline-none">
             Back
           </Link>
