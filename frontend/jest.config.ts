@@ -33,6 +33,9 @@ const customJestConfig = {
 
   // カバレッジレポートのディレクトリ
   coverageDirectory: '<rootDir>/coverage',
+
+  //Jestがテストファイルを検出するためのパターン指定
+  testMatch: ['<rootDir>/components/**/*.test.{ts,tsx}'],
 };
 
 // 作成したJestのカスタム設定をエクスポートする
